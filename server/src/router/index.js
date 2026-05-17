@@ -27,11 +27,14 @@ router.post(
   contestController.dataForContest
 );
 
-router.post(
-  '/getCustomersContests',
-  checkToken.checkToken,
-  contestController.getCustomersContests
-);
+router.get('/contests', contestsRouter);
+
+// router.use()
+// router.post(
+//   '/getCustomersContests',
+//   checkToken.checkToken,
+//   contestController.getCustomersContests
+// );
 
 router.get(
   '/getContestById',
