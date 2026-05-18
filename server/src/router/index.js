@@ -36,12 +36,13 @@ router.get('/contests', contestsRouter);
 //   contestController.getCustomersContests
 // );
 
-router.get(
-  '/getContestById',
-  checkToken.checkToken,
-  basicMiddlewares.canGetContest,
-  contestController.getContestById
-);
+// router.get(
+//   '/getContestById',
+//   checkToken.checkToken,
+//   basicMiddlewares.canGetContest,
+//   contestController.getContestById
+// );
+
 
 router.post(
   '/getAllContests',
