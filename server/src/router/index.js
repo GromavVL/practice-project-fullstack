@@ -23,7 +23,7 @@ router.get('/offers', contestController.getAllOffers);
 
 router.use(checkToken.checkToken);
 
-
+router.get('/users/:id/transactions', userController.getTransaction);
 router.use('/contests', contestsRouter);
 
 router.post('/dataForContest', contestController.dataForContest);
