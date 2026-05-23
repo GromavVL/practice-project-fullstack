@@ -259,6 +259,40 @@ class CreatorDashboard extends React.Component {
                 <option value='asc'>Ascending</option>
               </select>
             </div>
+            <div>
+              <ul>
+                {creatorFilter.ownEntries && (
+                  <li>
+                    My Entries
+                    <button
+                      onClick={() => {
+                        this.changePredicate({
+                          name: 'ownEntries',
+                          values: 'false',
+                        });
+                      }}
+                    >
+                      X
+                    </button>
+                  </li>
+                )}
+                {creatorFilter.contestId && (
+                  <li>
+                    Contest ID
+                    <button
+                      onClick={() => {
+                        this.changePredicate({
+                          name: 'contestId',
+                          values: '',
+                        });
+                      }}
+                    >
+                      X
+                    </button>
+                  </li>
+                )}
+              </ul>
+            </div>
           </div>
         </div>
         {error ? (
